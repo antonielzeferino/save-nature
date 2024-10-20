@@ -6,10 +6,19 @@ import night from "@/public/backgrounds/night.png";
 import leefs from "@/public/leefs.png";
 import EcoFriendlyActionsList from "@/components/EcoFriendlyActionsList";
 import EcoProjects from "@/components/EcoProjects";
+import Head from "next/head";
 
 function Home() {
   return (
     <div>
+      <Head>
+        <link rel="preload" href="/backgrounds/main-bg.png" as="image" />
+        <link rel="preload" href="/backgrounds/noon.png" as="image" />
+        <link rel="preload" href="/backgrounds/sunset.png" as="image" />
+        <link rel="preload" href="/backgrounds/night.png" as="image" />
+        <link rel="preload" href="/leefs.png" as="image" />
+      </Head>
+
       <main
         style={{ backgroundImage: `url(${mainBG.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         className="relative w-full h-[50vh] md:h-[90vh] text-slate-300 flex flex-col justify-center overflow-hidden"
