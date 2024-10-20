@@ -1,101 +1,97 @@
 import Image from "next/image";
+import mainBG from "@/public/backgrounds/main-bg.png";
+import noon from "@/public/backgrounds/noon.png";
+import sunSet from "@/public/backgrounds/sunset.png";
+import night from "@/public/backgrounds/night.png";
+import leefs from "@/public/leefs.png";
+import EcoFriendlyActionsList from "@/components/EcoFriendlyActionsList";
+import EcoProjects from "@/components/EcoProjects";
 
-export default function Home() {
+function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <main
+        style={{ backgroundImage: `url(${mainBG.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="relative w-full h-[50vh] md:h-[90vh] text-slate-300 flex flex-col justify-center overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="relative z-0 px-6 md:px-12 lg:px-24">
+          <h1 className="text-4xl md:text-7xl font-bold opacity-90 z-0">
+            SALVE A NATUREZA
+          </h1>
+        </div>
+
+        <div className="absolute w-full h-[40vh] md:h-[65vh] top-[10vh] md:top-[28vh] z-10 overflow-hidden">
+          <Image src={leefs} layout="fill" objectFit="cover" alt="folhas da selva" priority className="object-cover" />
+        </div>
+
+        <div className="relative z-20 px-6 md:px-12 lg:px-24">
+          <h2 className="text-md md:text-4xl mt-4 max-w-[800px]">
+            Conecte-se com o equilíbrio natural e inspire sua jornada sustentável.
+          </h2>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <section className="bg-[#8DAB35] p-2 indent-2 text-sm text-justify md:text-xl">
+        <p className="text-stone-200">A preservação da natureza envolve práticas e políticas que visam proteger os recursos naturais da Terra. Isso inclui a conservação de florestas, rios, mares, fauna e flora, buscando garantir que esses recursos permaneçam intactos para as futuras gerações. O equilíbrio dos ecossistemas é essencial para a sobrevivência de todas as formas de vida no planeta, e a preservação ambiental é um dos pilares para manter esse equilíbrio.</p>
+      </section>
+      <section
+        style={{
+          backgroundImage: `url(${noon.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+        className="p-4"
+      >
+        <EcoFriendlyActionsList />
+      </section>
+      <section
+        style={{
+          backgroundImage: `url(${sunSet.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+        className="p-4 md:text-2xl min-h-[50vh]"
+      >
+        <h3 className="p-4 font-bold">
+          Projetos sobre preservação da natureza
+        </h3>
+        <EcoProjects />
+      </section>
+      <footer
+        className="bg-cover bg-center text-white p-8"
+        style={{
+          backgroundImage: `url(${night.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div>
+            <p><strong>Localização:</strong> Rua exemplo 123</p>
+            <p><strong>Email:</strong> <a href="mailto:exemplo@gmail.com" className="text-white">exemplo@gmail.com</a></p>
+            <p><strong>Telefone:</strong> (12) 3456-789</p>
+          </div>
+
+          <div>
+            <p><strong>Autor:</strong> Antoniel Zeferino de Melo</p>
+            <p><strong>Email:</strong> <a href="mailto:antonielzeferino0@gmail.com" className="text-white">antonielzeferino0@gmail.com</a></p>
+            <p><strong>Contato:</strong> (86) 99540-7002</p>
+          </div>
+
+          <div>
+            <p><strong>Me siga nas minhas redes sociais:</strong></p>
+            <a href="https://www.linkedin.com" target="_blank" className="text-white mr-2">LinkedIn</a>
+            <a href="https://github.com" target="_blank" className="text-white mr-2">GitHub</a>
+            <a href="https://www.instagram.com" target="_blank" className="text-white">Instagram</a>
+          </div>
+        </div>
+
+        <p className="mt-5 text-sm">&copy; 2024 Antoniel Zeferino de Melo. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
 }
+
+export default Home;
