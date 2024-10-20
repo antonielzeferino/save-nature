@@ -82,9 +82,11 @@ function Home() {
 
           <div>
             <p><strong>Me siga nas minhas redes sociais:</strong></p>
-            <a href="https://www.linkedin.com" target="_blank" className="text-white mr-2">LinkedIn</a>
-            <a href="https://github.com" target="_blank" className="text-white mr-2">GitHub</a>
-            <a href="https://www.instagram.com" target="_blank" className="text-white">Instagram</a>
+            <div className="flex justify-evenly">
+              <a href="https://www.linkedin.com/in/antonielzeferino" target="_blank" className="text-white hover:text-blue-500 mr-2">LinkedIn</a>
+              <a href="https://github.com/antonielzeferino" target="_blank" className="text-white hover:text-blue-500">GitHub</a>
+              <a href="https://www.instagram.com/antonielzeferino" target="_blank" className="text-white hover:text-blue-500">Instagram</a>
+            </div>
           </div>
         </div>
 
