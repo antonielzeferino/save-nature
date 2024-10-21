@@ -27,7 +27,7 @@ const EcoFriendlyActionsList: React.FC = () => {
             objectFit="cover" 
             className="absolute inset-0 transition duration-300 ease-in-out" 
           />
-          <h5 className="relative z-10 text-stone-300 text-2xl md:text-3xl p-2 text-center rounded-lg">
+          <h5 className="relative z-10 text-stone-300 text-2xl md:text-3xl p-2 text-center rounded-lg bg-black/90">
             {action.text}
           </h5>
         </div>
