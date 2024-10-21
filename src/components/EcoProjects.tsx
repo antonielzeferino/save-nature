@@ -26,7 +26,7 @@ function EcoProjects() {
     <div>
       <ul className="flex xl:overflow-hidden min-w-full gap-5 p-4 overflow-x-scroll">
         {ecoProjectsList.map((el, index) => (
-          <li className="min-w-[280px] md:w-[25vw] border-2 p-4 rounded-lg border-stone-400/50" key={index}>
+          <li className="min-w-[280px] md:w-[35vw] lg:w-[25vw] border-2 p-4 rounded-lg border-stone-400/50 bg-black/80" key={index}>
             <strong className="text-md md:text-2xl">{el.title}</strong>
             <br />
             <p className="indent-1 text-sm md:text-xl text-justify text-gray-100/90">
